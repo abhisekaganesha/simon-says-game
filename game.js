@@ -16,12 +16,13 @@ $(document).keydown(function () {
     gameStarted = true;
   }
 });
-$(".start-button").click(function () {
+$(document).on("click", ".start-button", function () {
   if (!gameStarted) {
-    nextSequence();
     gameStarted = true;
+    nextSequence();
   }
 });
+
 
 // BUTTON PRESS
 $(".b").click(function () {
@@ -112,3 +113,4 @@ function checkAnswer(currentLevel) {
     $("h1").html('Press<button class="start-button">START</button>to Start');
   }
 }
+
