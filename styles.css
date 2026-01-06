@@ -1,0 +1,121 @@
+body {
+  text-align: center;
+  background-color: #011f3f;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#level-title {
+  font-family: "Press Start 2P", cursive;
+  font-size: clamp(1.2rem, 5vw, 2.8rem);
+  margin: 10px 20px;
+  color: #fef2bf;
+  line-height: 1.4;
+}
+
+.start-button {
+  font-family: "Press Start 2P", cursive;
+  font-size: clamp(1rem, 4vw, 2.2rem);
+  margin: 15px;
+  padding: 12px 24px;
+  color: white;
+  background-color: #00ff2a;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.num-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+}
+
+.box {
+  background-color: gray;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* SELALU 3x3 */
+  gap: clamp(10px, 3vw, 20px);
+  padding: clamp(15px, 5vw, 40px);
+  border-radius: 40px;
+  width: 90vmin; /* Lebar maksimal proporsional */
+  max-width: 600px; /* Batas atas biar ga kegedean di monitor besar */
+  aspect-ratio: 1 / 1; /* Pastikan kotak tetap persegi */
+  box-shadow: 0 0 25px 10px rgb(0, 0, 0);
+}
+
+.outerbox {
+  background-color: rgb(61, 61, 61);
+  border-radius: 19%;
+  border: 6px solid rgb(44, 44, 44);
+  box-shadow: 0 0 20px rgb(32, 32, 32);
+  transition: all 0.3s;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(8px, 2vw, 15px);
+}
+
+button {
+  height: 100%;
+  width: 100%;
+  border: 0 solid rgb(87, 87, 87);
+  box-shadow: 0 0 20px rgb(143, 143, 143);
+  border-radius: 20%;
+  transition: all 0.2s;
+}
+
+/* Hover hanya di desktop */
+@media (hover: hover) {
+  button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  .outerbox:hover {
+    opacity: 0.7;
+  }
+}
+
+/* Efek sentuh di mobile */
+button:active,
+.outerbox:active {
+  opacity: 0.7;
+}
+
+.bgreen {
+  background-color: #65ff7f;
+  box-shadow: 0 0 20px #00ff2a;
+}
+.blockgreen {
+  background-color: green;
+  box-shadow: 0 0 2000px 15px green;
+  border-color: rgb(0, 87, 0);
+}
+
+.bred {
+  background-color: rgb(255, 101, 101);
+  box-shadow: 0 0 20px rgb(255, 0, 0);
+}
+.blockred {
+  background-color: red;
+  box-shadow: 0 0 2000px 15px red;
+  border-color: rgb(87, 0, 0);
+}
+
+.bpress {
+  background-color: #616161;
+  box-shadow: 0 0 20px rgb(75, 75, 75);
+}
+.blockpress {
+  background-color: rgb(27, 27, 27);
+  box-shadow: 0 0 0 rgb(2, 2, 2);
+}
