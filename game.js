@@ -23,7 +23,6 @@ $(document).on("click", ".start-button", function () {
   }
 });
 
-
 // BUTTON PRESS
 $(".b").click(function () {
   if (isPlayingSequence) return; // ⛔ STOP kalau sequence lagi jalan
@@ -113,5 +112,3 @@ function checkAnswer(currentLevel) {
     $("h1").html('Press<button class="start-button">START</button>to Start');
   }
 }
-
-
